@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    // height: 700px;
 `;
 
 export const HalfscreenContent = styled.div`
@@ -31,7 +30,7 @@ export const InputContainerItem = styled.div`
     
     input {
         margin-top: 10px;
-        min-width: 250px;
+        min-width: 300px;
         min-height: 30px;
     }
 `;
@@ -63,11 +62,18 @@ export const Footer = styled.div`
 `;
 
 export const HalfscreenMap = styled.div`
-background-color: pink;
+background-color: lightBlue;
     flex: 1;
     height: 500px;
     visibility: visible;
     animation-name: fadeIn;
+`;
+
+export const Map = styled.div`
+    width: 400px;
+    height: 400px;
+    margin-left: 150px;
+    margin-top: 50px;
 `;
 
 export const TextBackground = styled.div`

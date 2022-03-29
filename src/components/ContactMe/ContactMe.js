@@ -1,8 +1,11 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+// import SocialFollow from "../SocialFollow/SocialFollow";
 import { Wrapper, 
     HalfscreenContent, InTouchBox, InputContainer, InputContainerItem, Comment, Footer,
-     HalfscreenMap, TextBackground } from './ContactMe.style';
+     HalfscreenMap, Map,
+     TextBackground } from './ContactMe.style';
+import GoogleMap from "./GoogleMap";
 
 function ContactMe() {
     return(
@@ -46,7 +49,10 @@ function ContactMe() {
                         </Footer>
                     </InTouchBox>
                 </HalfscreenContent>
-                <HalfscreenMap></HalfscreenMap>
+                <HalfscreenMap>
+                    <Map><GoogleMap /></Map>
+                    {/* <SocialFollow/> */}
+                </HalfscreenMap>
             </Wrapper>
             <TextBackground>Contact</TextBackground>
         </>
