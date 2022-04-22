@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import marker from '../../image/marker.png';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-// const Marker = (options) => {
-//   const [marker, setMarker] = React.useState();
-
-//   React.useEffect(() => {
-//     if (!marker)
-//       setMarker(new google.maps)
-//   })
-// };
+const AnyReactComponent = ({ text }) => <div>{text}<img src={marker} alt="logo" width="20" /></div>;
 
 class GoogleMap extends Component {
   // static defaultProps = {
@@ -47,7 +39,7 @@ class GoogleMap extends Component {
   render() {
       return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '100%', width: '100%' }}>
+      <div style={{ height: '80%', width: '80%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "" }}
           defaultCenter={this.state.center}
@@ -57,7 +49,7 @@ class GoogleMap extends Component {
           <AnyReactComponent
             lat={this.state.center.lat}
             lng={this.state.center.lng}
-            text="My Marker"
+            text=""
           />
         </GoogleMapReact>
       </div>

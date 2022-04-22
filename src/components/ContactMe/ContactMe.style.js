@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import laptop from '../../image/laptop.png';
 
 export const Wrapper = styled.div`
     display: flex;
@@ -67,12 +68,17 @@ background-color: lightBlue;
     height: 500px;
     visibility: visible;
     animation-name: fadeIn;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
 `;
 
 export const Map = styled.div`
-    width: 400px;
-    height: 400px;
-    margin-left: 150px;
+    background-image: url('${laptop}');
+    width: 500px;
+    height: 500px;
     margin-top: 50px;
 `;
 

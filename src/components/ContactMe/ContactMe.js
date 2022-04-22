@@ -6,6 +6,7 @@ import { Wrapper,
      HalfscreenMap, Map,
      TextBackground } from './ContactMe.style';
 import GoogleMap from "./GoogleMap";
+import SocialNetwork from "./SocialNetwork";
 
 function ContactMe() {
     return(
@@ -50,8 +51,11 @@ function ContactMe() {
                     </InTouchBox>
                 </HalfscreenContent>
                 <HalfscreenMap>
-                    <Map><GoogleMap /></Map>
-                    {/* <SocialFollow/> */}
+                    <Map>
+                        {/* <img src={laptop} alt="logo" width="120" /> */}
+                        <GoogleMap />
+                    </Map>
+                    <SocialNetwork></SocialNetwork>
                 </HalfscreenMap>
             </Wrapper>
             <TextBackground>Contact</TextBackground>
