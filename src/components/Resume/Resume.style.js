@@ -64,7 +64,7 @@ export const ResumeWrapper = styled.div`
         top: 22px;
         width: 0;
         z-index: 1;
-        right: 30px;
+        right: 20px;
         border: medium solid white;
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent white;
@@ -79,7 +79,7 @@ export const ResumeWrapper = styled.div`
         top: 22px;
         width: 0;
         z-index: 1;
-        left: 30px;
+        left: 20px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;

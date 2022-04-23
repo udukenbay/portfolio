@@ -4,6 +4,7 @@ import laptop from '../../image/laptop.png';
 export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
+    background-color: #f7f7f7;
 `;
 
 export const HalfscreenContent = styled.div`
@@ -14,13 +15,30 @@ export const HalfscreenContent = styled.div`
 export const InTouchBox = styled.div`
     background: #fff;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
-    margin: 10px;
+    margin: 20px;
+    padding: 10px;
+
+    h1 {
+        margin: 20px;
+        font-family: serif;
+        color: #5e6868;
+    }
 `;
 
 export const InputContainer = styled.div`
     display: flex;
     flex-direction: row;
     margin: 20px;
+
+    label {
+        font-family: serif;
+        color: #5e6868;
+    }
+
+    input {
+        font-family: serif;
+        color: #5e6868;
+    }
 `;
 
 export const InputContainerItem = styled.div`
@@ -63,7 +81,7 @@ export const Footer = styled.div`
 `;
 
 export const HalfscreenMap = styled.div`
-background-color: lightBlue;
+    background-color: #f7f7f7;
     flex: 1;
     height: 500px;
     visibility: visible;
@@ -71,15 +89,22 @@ background-color: lightBlue;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-left: 50px;
 `;
 
 export const Map = styled.div`
     background-image: url('${laptop}');
-    width: 500px;
-    height: 500px;
+    width: 650px;
+    height: 400px;
     margin-top: 50px;
+`;
+
+export const Social = styled.div`
+    margin-top: 20px;
+    img {
+        margin-right: 20px;
+    }
 `;
 
 export const TextBackground = styled.div`
@@ -89,6 +114,6 @@ export const TextBackground = styled.div`
     font-family: 'Amiri';
     font-style: normal;
     font-weight: 400;
-    font-size: 250px;
+    font-size: 200px;
     color: rgba(0, 0, 0, 0.05);
 `;

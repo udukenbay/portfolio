@@ -18,27 +18,27 @@ function ContactMe() {
                         <h1>Get in Touch</h1>
                         <InputContainer>
                             <InputContainerItem>
-                                <label>First Name</label>
+                                <label>First Name:</label>
                                 <input placeholder="Please Your Name"></input>
                             </InputContainerItem>
                             <InputContainerItem>
-                                <label>Last Name</label>
+                                <label>Last Name:</label>
                                 <input placeholder="Please Your Surname"></input>
                             </InputContainerItem>
                         </InputContainer>
                         <InputContainer>
                             <InputContainerItem>
-                                <label>E-mail</label>
+                                <label>E-mail:</label>
                                 <input placeholder="Please enter E-mail"></input>
                             </InputContainerItem>
                             <InputContainerItem>
-                                <label>Phone</label>
+                                <label>Phone:</label>
                                 <input placeholder="Please enter Your Phone"></input>
                             </InputContainerItem>
                         </InputContainer>
                         <Comment>
-                            <label>Comment</label>
-                            <textarea placeholder="Comment..."></textarea>
+                            <label>Comment:</label>
+                            <textarea placeholder="Write your message to me..."></textarea>
                         </Comment>
                         <Footer>
                             <button>
