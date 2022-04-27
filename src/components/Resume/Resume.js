@@ -6,7 +6,7 @@ import { ResumeList } from "./cv.js";
 
 export default function Resume() {
     const list = ResumeList;
-    console.log(list);
+    // console.log(list);
 
     // const container = list.map((item) => (
     //     // console.log(value.company + ' ' + index);
