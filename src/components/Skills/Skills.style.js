@@ -7,89 +7,76 @@ export const SkillsWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+`;
 
-    .skills {
-        width: 80px;
-        height: 80px;
-        background-color: deepskyblue;
-        border-radius: 50%;
-        position: relative;
+export const Cicle = styled.div`
+    margin-top: 100px;
+
+    .container {
+        // width: 100%;
+        // background-color: #2196F3;
+        h1 {font-family: fantasy;}
     }
 
-    .inner {
-        width: 100%;
-        height: 100%;
-        // background-color: green;
-        position: absolute;
-        animation: rotation 3s infinite linear;
-        border-radius: 50%;
-        padding: 100px;
-        border: 1px solid silver;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .inner::before {
-        content: 'Java';
-        width: 20px;
-        height: 20px;
-        background-color: deeppink;
-        position: absolute;
-        left: -20px;
-        top: -20px;
-        border-radius: 50%;
-        margin: 50px;
-    }
-
-    @keyframes rotation {
-        0% {
-            transform: translate(-50%, -50%) rotate(-30deg);
+    .skill {
+        :nth-child(even) {
+            color: red;
         }
-        25% {
-            transform: translate(-50%, -50%) rotate(120deg);
+
+        :nth-child(odd) {
+            color: blue;
         }
+
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
     }
 
-    // .proton {
-    //     width: 80px;
-    //     height: 80px;
-    //     background-color: deepskyblue;
-    //     border-radius: 50%;
-    //     position: relative;
-    // }
+    .item {
+        background-color: blue;
+    }
 
-    // .electron {
-    //     width: 100%;
-    //     height: 100%;
-    //     // background-color: green;
-    //     position: absolute;
-    //     animation: rotation 3s infinite linear;
-    //     border-radius: 50%;
-    //     padding: 100px;
-    //     border: 1px solid silver;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    // }
 
-    // .electron::before {
-    //     content: 'Java';
-    //     width: 20px;
-    //     height: 20px;
-    //     background-color: deeppink;
-    //     position: absolute;
-    //     left: -20px;
-    //     top: -20px;
-    //     border-radius: 50%;
-    //     margin: 50px;
-    // }
+    /* The animation code */
+    @keyframes example {
+        from {
+            top: 110%;
+            left: 50%;
+            color: green;
+            
+        }
+        to {
+            top: 0%;
+            left: 50%;
+            transform: rotate( 360deg );
+            color: yellow;
+        }
 
-    // @keyframes rotation {
-    //     0% {
-    //         transform: translate(-50%, -50%) rotate(-360deg);
-    //     }
-    // }
+        // 0% {
+        //     top: 110%;
+        //     left: 50%;
+        //  }
+        //  50% {
+        //     top: 0%;
+        //     left: 50%;
+        //     transform: rotate( 360deg );
+        //  }
+        //  100% {
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: rotate( 360deg );
+        //  }
+
+        0%   {color:red; left:0px; top:0px;}
+        25%  {color:yellow; left:200px; top:0px;}
+        50%  {color:blue; left:200px; top:200px;}
+        75%  {color:green; left:0px; top:200px;}
+        100% {color:red; left:0px; top:0px;}
+    }
+`;
+
+export const Panel = styled.div`
+    
 `;
 
 export const TextBackground = styled.div`

@@ -58,6 +58,7 @@ export const ResumeWrapper = styled.div`
 
     /* Add arrows to the left container (pointing right) */
     .left::before {
+        background-color: #e2feff;
         content: " ";
         height: 0;
         position: absolute;
@@ -91,7 +92,7 @@ export const ResumeWrapper = styled.div`
     }
 
     .content {
-        background-color: #e2feff;
+        // background-color: #e2feff;
         padding: 20px 30px;
         position: relative;
         border-radius: 6px;
