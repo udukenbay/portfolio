@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio-app/static/css/main.073c9b0a.css",
+    "main.js": "/portfolio-app/static/js/main.5c85f838.js",
+    "static/js/787.30237536.chunk.js": "/portfolio-app/static/js/787.30237536.chunk.js",
+    "static/media/urziya.png": "/portfolio-app/static/media/urziya.e9c3ac956afbf6d9e9b9.png",
+    "static/media/computing.png": "/portfolio-app/static/media/computing.b516d52e1f5da839b6ad.png",
+    "static/media/instagram.png": "/portfolio-app/static/media/instagram.8e408da00539cdef4629.png",
+    "static/media/tekled_01.png": "/portfolio-app/static/media/tekled_01.4f710abf8c0637ce5d81.png",
+    "static/media/gate_01.png": "/portfolio-app/static/media/gate_01.415a53b7a0e4586fe1c4.png",
+    "static/media/sdu_01.png": "/portfolio-app/static/media/sdu_01.88b553e6c25622b615b1.png",
+    "static/media/logo.png": "/portfolio-app/static/media/logo.1bdb7747d47649184888.png",
+    "static/media/kaspi_01.png": "/portfolio-app/static/media/kaspi_01.85cf6695757ce94a9c02.png",
+    "static/media/borlas_01.png": "/portfolio-app/static/media/borlas_01.5d44b7ed072a61a6a452.png",
+    "static/media/telegram.png": "/portfolio-app/static/media/telegram.e9722f26cc228e817986.png",
+    "static/media/laptop.png": "/portfolio-app/static/media/laptop.2c9f18fbd55f20ba28b8.png",
+    "static/media/logo_tag.png": "/portfolio-app/static/media/logo_tag.7b24e2796b3f0be66378.png",
+    "static/media/twitter.png": "/portfolio-app/static/media/twitter.894988327f8d68209e91.png",
+    "static/media/linkedin.png": "/portfolio-app/static/media/linkedin.f249b38224ca41a0b909.png",
+    "index.html": "/portfolio-app/index.html",
+    "main.073c9b0a.css.map": "/portfolio-app/static/css/main.073c9b0a.css.map",
+    "main.5c85f838.js.map": "/portfolio-app/static/js/main.5c85f838.js.map",
+    "787.30237536.chunk.js.map": "/portfolio-app/static/js/787.30237536.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5c85f838.js"
+  ]
+}
