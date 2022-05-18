@@ -9,6 +9,10 @@ import GoogleMap from "./GoogleMap";
 import SocialNetwork from "./SocialNetwork";
 
 function ContactMe() {
+    function sendMessage() {
+        
+    }
+
     return(
         <>
             <Navbar/>
@@ -41,7 +45,7 @@ function ContactMe() {
                             <textarea placeholder="Write your message to me..."></textarea>
                         </Comment>
                         <Footer>
-                            <button>
+                            <button onClick={sendMessage}>
                                 SEND MESSAGE
                             </button>
                             <button>
