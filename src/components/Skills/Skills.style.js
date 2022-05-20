@@ -10,7 +10,10 @@ export const SkillsWrapper = styled.div`
 `;
 
 export const Cicle = styled.div`
-    margin-top: 100px;
+    // margin-top: 100px;
+    position: absolute;
+    left: 50px;
+    top: 70px;
 
     .container {
         // width: 100%;
@@ -76,7 +79,10 @@ export const Cicle = styled.div`
 `;
 
 export const Panel = styled.div`
-    
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    background-color: green;
 `;
 
 export const TextBackground = styled.div`

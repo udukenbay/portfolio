@@ -10,19 +10,6 @@ function Skills() {
     const list = SkillsList;
     console.log(list);
 
-    // const FrontEndList = list.map((item, index) => 
-    //     (
-    //         <div className="skill" key={index}>
-    //             {item.FrontEnd}
-    //         </div>
-    //         // console.log(item);
-    //         // return <div className="skill" key={index}>
-    //         //             {item.FrontEnd}
-    //         //             {/* <p>{item.FrontEnd}</p> */}
-    //         //         </div>
-    //     )
-    // );
-
     const skills = list.map((item, i) => {
                         var x = Math.floor(Math.random() * (i+300));
                         var y = Math.floor(Math.random() * (i+250));
@@ -63,7 +50,10 @@ function Skills() {
                 </Cicle>
             
                 <Panel>
-                    
+                    <h1>Certificates</h1>
+                    <div className="container-certificates">
+                        
+                    </div>
                 </Panel>
             </SkillsWrapper>
             <TextBackground>Skills</TextBackground>
