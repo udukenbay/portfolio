@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 // import SocialFollow from "../SocialFollow/SocialFollow";
 import { Wrapper, 
@@ -9,9 +8,11 @@ import { Wrapper,
 import GoogleMap from "./GoogleMap";
 import SocialNetwork from "./SocialNetwork";
 import { send, init } from "emailjs-com";
+import ScheduleMeetUp from "./ScheduleMeetUp";
 
-function ContactMe() {
+function ContactMe(props) {
 
+    // start=> sendMessage by emailjs
     const serviceId = "service_iqsmwo2";
     const templateId = "template_xkujooy";
     const userID = "xzoBNoZAf7Fw2GyQo";
@@ -22,6 +23,8 @@ function ContactMe() {
         email: '',
         comment: ''
     });
+
+    const [isShow, setIsShow] = useState(false);
 
     const toSend = {
         fName: '',
@@ -51,8 +54,39 @@ function ContactMe() {
         state.email = '';
         state.comment = '';
     }
+    // end=> sendMessage by emailjs
 
-    return(
+    // start=> scheduleMeeting
+    const [start_date, set_start_date] = useState(new Date());
+    const [info_selected_active, set_info_selected_active] = useState(props);
+
+    function childToParent(event) {
+        set_start_date({ start_date: props.start_date})
+        set_info_selected_active({ info_selected_active: props.info_selected_active})
+    }
+
+    function scheduleMeet(e) {
+        if(state.email == "") {
+            alert('Please fill email');
+        } else {
+            console.log(isShow);
+            setIsShow({ isShow: !isShow });
+            console.log(isShow);
+        }
+    }
+
+    // const getComponent = () => {
+    //     if(showMeetUp) return <ScheduleMeetUp/>;
+    //     else return null;
+    // }
+    useEffect(() => {
+        // submit_data(first_name, last_name, start_date);
+        set_info_selected_active(false);
+    }, []);
+
+    // end=> scheduleMeeting
+
+    return (
         <>
             <Navbar/>
             <Wrapper>
@@ -112,7 +146,7 @@ function ContactMe() {
                             <button onClick={sendMessage}>
                                 SEND MESSAGE
                             </button>
-                            <button>
+                            <button onClick={scheduleMeet}>
                                 SCHEDULE MEETING
                             </button>
                         </Footer>
@@ -125,7 +159,12 @@ function ContactMe() {
                     </Map>
                     <SocialNetwork></SocialNetwork>
                 </HalfscreenMap>
+
             </Wrapper>
+
+            {isShow ? <ScheduleMeetUp childToParent={childToParent}/> : null}
+            {/* <ScheduleMeetUp isShow={true} /> */}
+            {/* {getComponent} */}
             <TextBackground>Contact</TextBackground>
         </>
     )

@@ -17,6 +17,7 @@ export const InTouchBox = styled.div`
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
     margin: 20px;
     padding: 10px;
+    z-index: 2;
 
     h1 {
         margin: 20px;
@@ -73,7 +74,7 @@ export const Footer = styled.div`
         border: 1px solid #00D9DB;
         min-width: 100px;
         padding: 14px;
-        margin: 2em 4em;
+        margin: 1em 4em;
         font-weight: 300;
         font-size: 18px;
         font-family: Roboto;
@@ -108,7 +109,7 @@ export const Social = styled.div`
 `;
 
 export const TextBackground = styled.div`
-    position: absolute;
+    // position: absolute;
     bottom: 0;
     left: 0;
     font-family: 'Amiri';
@@ -116,4 +117,5 @@ export const TextBackground = styled.div`
     font-weight: 400;
     font-size: 200px;
     color: rgba(0, 0, 0, 0.05);
+    z-index: 1;
 `;

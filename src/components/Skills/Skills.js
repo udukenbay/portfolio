@@ -22,7 +22,9 @@ function Skills() {
                             <div key={item.skill}>
                                 {
                                     item.skillSet.map((val, index) => 
-                                        <div key={index+"-"+item.skillSet} style={css} className='skill'>
+                                        <div key={index+"-"+item.skillSet} style={{
+                                            transform: 'translate('+Math.floor(Math.random() * (index+300))+'px, '+Math.floor(Math.random() * (index+250))+'px)' 
+                                        }} className='skill'>
                                             {val}
                                         </div>
                                 )
