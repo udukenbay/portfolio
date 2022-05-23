@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 // import SocialFollow from "../SocialFollow/SocialFollow";
 import { Wrapper, 
@@ -17,12 +17,17 @@ function ContactMe(props) {
     const templateId = "template_xkujooy";
     const userID = "xzoBNoZAf7Fw2GyQo";
 
-    const [state, setState] = useState({
-        fName: '',
-        lName: '',
-        email: '',
-        comment: ''
-    });
+    // const [state, setState] = useState({
+    //     fName: '',
+    //     lName: '',
+    //     email: '',
+    //     comment: ''
+    // });
+
+    const [fName, setFname] = useState('');
+    const [lName, setLname] = useState('');
+    const [email, setEmail] = useState('');
+    const [comment, setComment] = useState('');
 
     const [isShow, setIsShow] = useState(false);
 
@@ -41,10 +46,10 @@ function ContactMe(props) {
     
     function sendMessage(e) {
         init(userID);
-        toSend.fName = state.fName;
-        toSend.lName = state.lName;
-        toSend.email = state.email;
-        toSend.comment = state.comment;
+        toSend.fName = fName;
+        toSend.lName = lName;
+        toSend.email = email;
+        toSend.comment = comment;
         send(
             serviceId, templateId, toSend
             )
@@ -54,41 +59,69 @@ function ContactMe(props) {
             .catch((err) => {
                 console.log(err);
             });
-        state.fName = '';
-        state.lName = '';
-        state.email = '';
-        state.comment = '';
+        setFname('');
+        setLname('');
+        setEmail('');
+        setComment('');
     }
     // end=> sendMessage by emailjs
 
     // start=> scheduleMeeting
-    const [start_date, set_start_date] = useState(new Date());
-    const [info_selected_active, set_info_selected_active] = useState(false);
 
     function scheduleMeet(e) {
-        if(state.email == "") {
-            alert('Please fill email');
+        if(email === "") {
+            alert('Please fill email, first name, last name and email. Just for sure please');
         } else {
-            console.log(isShow);
-            setIsShow({ isShow: !isShow });
-            console.log(isShow);
+            setIsShow(true);
+            // setIsShow({ isShow: !isShow });
+            console.log('isShow(scheduleMeet)', isShow);
         }
     }
 
-    // const getComponent = () => {
-    //     if(showMeetUp) return <ScheduleMeetUp/>;
-    //     else return null;
-    // }
-    useEffect(() => {
-        // submit_data(first_name, last_name, start_date);
-        set_info_selected_active(false);
-    }, []);
+    const [drive, setDrive] = useState(new Date());// the lifted state
+    const [selected, setSelected] = useState(false);// the lifted state
+//https://towardsdatascience.com/passing-data-between-react-components-parent-children-siblings-a64f89e24ecf
+// Step 1: Define a callback function that takes in a parameter which we consider having accessed from the child in the Parent.js
+// Step 2: Also, send the defined callback function as a props to the Child1.js
+//https://stackoverflow.com/questions/63431820/passing-data-child-to-parent-functional-components-in-reactjs (helped me)
+    const updateMeetUp_Date = (startTime) => {// the callback.
+        console.log("coming date:", startTime);
+        setDrive(startTime);
+    }
 
+    const updateMeetUp_Selected = (active) => {
+        console.log("coming status:", active);
+        setSelected(active)
+        setIsShow(false);
+        console.log('isShow(updateMeetUp_Selected)', isShow);
+
+        console.log('(updateMeetUp_Selected)', email, fName, lName, comment);
+        //sending mail
+        init(userID);
+        toSend.fName = fName;
+        toSend.lName = lName;
+        toSend.email = email;
+        toSend.comment = `Let's meet on this day: ${drive}`;
+        send(
+            serviceId, templateId, toSend
+            )
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+        setFname('');
+        setLname('');
+        setEmail('');
+        setComment('');
+    }
     // end=> scheduleMeeting
 
     return (
         <>
             <Navbar/>
+            {isShow ? <ScheduleMeetUp updateMeetUp_Date={updateMeetUp_Date} updateMeetUp_Selected={updateMeetUp_Selected}/> : null}
             <Wrapper>
                 <HalfscreenContent>
                     <InTouchBox>
@@ -98,20 +131,16 @@ function ContactMe(props) {
                                 <label>First Name:</label>
                                 <input 
                                     placeholder="Please Your Name"
-                                    value={state.fName ? state.fName : ''}
-                                    onChange={e => setState({
-                                        fName:e.target.value
-                                    })}
+                                    value={fName}
+                                    onChange={e => setFname(e.target.value)}
                                 ></input>
                             </InputContainerItem>
                             <InputContainerItem>
                                 <label>Last Name:</label>
                                 <input 
                                     placeholder="Please Your Surname"
-                                    value={state.lName ? state.lName : ''}
-                                    onChange={e => setState({
-                                        lName:e.target.value
-                                    })}
+                                    value={lName}
+                                    onChange={e => setLname(e.target.value)}
                                 ></input>
                             </InputContainerItem>
                         </InputContainer>
@@ -120,10 +149,8 @@ function ContactMe(props) {
                                 <label>E-mail:</label>
                                 <input 
                                     placeholder="Please enter E-mail"
-                                    value={state.email ? state.email : ''}
-                                    onChange={e => setState({
-                                        email:e.target.value
-                                    })}
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
                                 ></input>
                             </InputContainerItem>
                             <InputContainerItem>
@@ -135,11 +162,8 @@ function ContactMe(props) {
                             <label>Comment:</label>
                             <textarea 
                                 placeholder="Write your message to me..."
-
-                                value={state.comment ? state.comment : ''}
-                                onChange={e => setState({
-                                    comment:e.target.value
-                                })}
+                                value={comment}
+                                onChange={e => setComment(e.target.value)}
                             ></textarea>
                         </Comment>
                         <Footer>
@@ -162,7 +186,6 @@ function ContactMe(props) {
 
             </Wrapper>
 
-            {isShow ? <ScheduleMeetUp start_date={start_date} set_info_selected_active={set_info_selected_active}/> : null}
             {/* <ScheduleMeetUp isShow={true} /> */}
             {/* {getComponent} */}
             <TextBackground>Contact</TextBackground>
