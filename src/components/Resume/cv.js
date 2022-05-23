@@ -3,6 +3,7 @@ import gate from '../../image/company_logo/gate_01.png';
 import teksan from '../../image/company_logo/tekled_01.png';
 import borlas from '../../image/company_logo/borlas_01.png';
 import sdu from '../../image/company_logo/sdu_01.png';
+import school from '../../image/company_logo/school.png';
 
 export const ResumeList = [
     {
@@ -40,9 +41,25 @@ export const ResumeList = [
     {
         "time": "Sep 2012 - Jun 2016",
         "company": "Suleyman Demirel University",
-        "position": "Computer Science, B.Sc.",
+        "position": "Computer Science, B.Sc.👩‍🎓🎓👩🏻‍💻",
         "sector": "Education",
         "duties": "GPA: 3.53 (4.0). Diploma with honors. Participated in enterprise project in KazMunayGas Jun - Aug 2015, as system administrator",
         "logo": sdu
+    },
+    {
+        "time": "Sep 2007 - Jun 2012",
+        "company": "Daryn for gifted children",
+        "position": "Student",
+        "sector": "Education",
+        "duties": "GPA: 4.79 (5.0). Class monitor. Have been participated in the team sprint race among the schools for 5 years. Five gold medals on these competitions. Danced at the annual fairs on behalf of the school.",
+        "logo": school
+    },
+    {
+        "time": "Sep 2000 - Jun 2007",
+        "company": "Abay School #5",
+        "position": "Schoolgirl",
+        "sector": "Education",
+        "duties": "Won 3 place in the Intercity Mathematics Olympiad",
+        "logo": school
     }
 ]

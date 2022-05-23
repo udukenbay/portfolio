@@ -101,6 +101,8 @@ export const ResumeWrapper = styled.div`
             height: 200px;
             margin-top: -200px;
             margin-left: 200px;
+            opacity: 0.5;
+            border-radius: 25%;
         
             @media (max-width: 768px) {
                 width: 200px;

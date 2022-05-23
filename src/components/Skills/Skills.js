@@ -11,12 +11,12 @@ function Skills() {
     console.log(list);
 
     const skills = list.map((item, i) => {
-                        var x = Math.floor(Math.random() * (i+300));
-                        var y = Math.floor(Math.random() * (i+250));
-                        var translate = 'translate('+x+'px, '+y+'px)';
-                        var css = {
-                            transform: translate 
-                        }
+                        // var x = Math.floor(Math.random() * (i+300));
+                        // var y = Math.floor(Math.random() * (i+250));
+                        // var translate = 'translate('+x+'px, '+y+'px)';
+                        // var css = {
+                        //     transform: translate 
+                        // }
 
                         return (
                             <div key={item.skill}>

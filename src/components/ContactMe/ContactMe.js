@@ -32,7 +32,12 @@ function ContactMe(props) {
         email: '',
         comment: ''
     }
+
+    // about props => interface react components
     
+    //OPEN MODAL REACT
+    // https://www.youtube.com/watch?v=LyLa7dU5tp8
+
     
     function sendMessage(e) {
         init(userID);
@@ -58,12 +63,7 @@ function ContactMe(props) {
 
     // start=> scheduleMeeting
     const [start_date, set_start_date] = useState(new Date());
-    const [info_selected_active, set_info_selected_active] = useState(props);
-
-    function childToParent(event) {
-        set_start_date({ start_date: props.start_date})
-        set_info_selected_active({ info_selected_active: props.info_selected_active})
-    }
+    const [info_selected_active, set_info_selected_active] = useState(false);
 
     function scheduleMeet(e) {
         if(state.email == "") {
@@ -162,7 +162,7 @@ function ContactMe(props) {
 
             </Wrapper>
 
-            {isShow ? <ScheduleMeetUp childToParent={childToParent}/> : null}
+            {isShow ? <ScheduleMeetUp start_date={start_date} set_info_selected_active={set_info_selected_active}/> : null}
             {/* <ScheduleMeetUp isShow={true} /> */}
             {/* {getComponent} */}
             <TextBackground>Contact</TextBackground>

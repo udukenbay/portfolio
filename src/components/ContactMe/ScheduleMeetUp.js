@@ -1,7 +1,7 @@
 import React from "react";
 import { ScheduleMeeting } from "react-schedule-meeting";
 
-function ScheduleMeetUp(props) {
+function ScheduleMeetUp(start_date, set_info_selected_active) {
     const availableTimeslots = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
         14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
     31, 32, ].map((id) => {
@@ -12,7 +12,8 @@ function ScheduleMeetUp(props) {
         };
     });
 
-
+console.log("testing:", start_date);
+console.log("testing:", set_info_selected_active);
 
     return (
         <>
@@ -22,8 +23,8 @@ function ScheduleMeetUp(props) {
                 eventDurationInMinutes={30}
                 availableTimeslots={availableTimeslots}
                 onStartTimeSelect={(e) => {
-                    props.set_start_date(e.startTime);
-                    props.set_info_selected_active(true);
+                    // props.set_start_date(e.startTime);
+                    // props.set_info_selected_active(true);
                     // set_start_date(e.startTime);
                     // set_info_selected_active(true);
                 }}
