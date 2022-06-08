@@ -4,6 +4,7 @@ export const ResumeWrapper = styled.div`
     display: flex;
     justify-content: center;
     height: 100%;
+    position: relative;
 
     /* The actual timeline (the vertical ruler) */
     .timeline {
@@ -146,6 +147,141 @@ export const ResumeWrapper = styled.div`
 }
 `;
 
+export const Download = styled.a`
+    width: 65px;
+    height: 65px;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+    border-radius: 50%;
+    border: none;
+    background-color: #00d9db40;
+    box-shadow: -2px 0px 5px #00d9db;
+`;
+
+export const ArrowContainer = styled.div`
+    margin-top: 25px;
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+`;
+
+export const Arrow = styled.div`
+    animation-name: opacity;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+
+    :last-child {
+        animation-direction: reverse;
+        margin-left: 10px;
+        margin-top: -13px;
+    }
+
+    div {
+        width: 10px;
+        height: 10px;
+        border-right: 3px solid #bebebe;
+        border-bottom: 3px solid #bebebe;
+        transform: rotate(315deg) translateZ(1px);
+    }
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 0.1;
+	}
+
+	20% {
+		opacity: 0.2;
+	}
+
+	30% {
+		opacity: 0.3;
+	}
+
+	40% {
+		opacity: 0.4;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	60% {
+		opacity: 0.6;
+	}
+
+	70% {
+		opacity: 0.7;
+	}
+
+	80% {
+		opacity: 0.8;
+	}
+
+	90% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateX(0);
+	}
+
+	10% {
+		transform: translateX(3px);
+	}
+
+	20% {
+		transform: translateX(6px);
+	}
+
+	30% {
+		transform: translateX(9px);
+	}
+
+	40% {
+		transform: translateX(12px);
+	}
+
+	50% {
+		transform: translateX(15px);
+	}
+
+	60% {
+		transform: translateX(18px);
+	}
+
+	70% {
+		transform: translateX(21px);
+	}
+
+	80% {
+		transform: translateX(24px);
+	}
+
+	90% {
+		transform: translateX(27px);
+	}
+
+	100% {
+		transform: translateX(30px);
+	}
+}`;
+
 export const TextBackground = styled.div`
     position: absolute;
     bottom: 0;
@@ -155,4 +291,5 @@ export const TextBackground = styled.div`
     font-weight: 400;
     font-size: 250px;
     color: rgba(0, 0, 0, 0.05);
+    z-index: -1000;
 `;

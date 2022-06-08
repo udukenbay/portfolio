@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import { ResumeWrapper,
+import { ResumeWrapper, 
+    Download, ArrowContainer, Arrow,
     TextBackground } from './Resume.style';
 import { ResumeList } from "./cv.js";
+import downloadCV from '../../assets/files/cv/UrziyaDukenbay.CV.pdf';
 
 export default function Resume() {
     const list = ResumeList;
@@ -52,6 +54,13 @@ export default function Resume() {
                 </div>
             </ResumeWrapper>
             <TextBackground>Resume</TextBackground>
+
+            <Download href={downloadCV} download="download cv" target='_blank'>
+                <ArrowContainer>
+                    <Arrow><div></div></Arrow>
+                    <Arrow><div></div></Arrow>
+                </ArrowContainer>
+            </Download>
         </>
     );
 }
