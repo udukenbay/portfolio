@@ -148,8 +148,8 @@ export const ResumeWrapper = styled.div`
 `;
 
 export const Download = styled.a`
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     font-family: Roboto,sans-serif;
     font-weight: 300;
     margin: 0;
@@ -160,12 +160,12 @@ export const Download = styled.a`
     z-index: 1000;
     border-radius: 50%;
     border: none;
-    background-color: #00d9db40;
-    box-shadow: -2px 0px 5px #00d9db;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #ff7f00;
 `;
 
 export const ArrowContainer = styled.div`
-    margin-top: 25px;
+    margin-left: 23px;
     animation-name: bounce;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -178,8 +178,6 @@ export const Arrow = styled.div`
 
     :last-child {
         animation-direction: reverse;
-        margin-left: 10px;
-        margin-top: -13px;
     }
 
     div {
@@ -187,7 +185,7 @@ export const Arrow = styled.div`
         height: 10px;
         border-right: 3px solid #bebebe;
         border-bottom: 3px solid #bebebe;
-        transform: rotate(315deg) translateZ(1px);
+        transform: rotate(45deg) translateZ(1px);
     }
 
 @keyframes opacity {
@@ -238,47 +236,47 @@ export const Arrow = styled.div`
 
 @keyframes bounce {
 	0% {
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 
 	10% {
-		transform: translateX(3px);
+		transform: translateY(3px);
 	}
 
 	20% {
-		transform: translateX(6px);
+		transform: translateY(6px);
 	}
 
 	30% {
-		transform: translateX(9px);
+		transform: translateY(9px);
 	}
 
 	40% {
-		transform: translateX(12px);
+		transform: translateY(12px);
 	}
 
 	50% {
-		transform: translateX(15px);
+		transform: translateY(15px);
 	}
 
 	60% {
-		transform: translateX(18px);
+		transform: translateY(18px);
 	}
 
 	70% {
-		transform: translateX(21px);
+		transform: translateY(21px);
 	}
 
 	80% {
-		transform: translateX(24px);
+		transform: translateY(24px);
 	}
 
 	90% {
-		transform: translateX(27px);
+		transform: translateY(27px);
 	}
 
 	100% {
-		transform: translateX(30px);
+		transform: translateY(30px);
 	}
 }`;
 
