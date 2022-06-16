@@ -18,15 +18,15 @@ export const CodeBlock = styled.div`
     }
 
     .img {
-        width: 1000px;
-        height: 700px;
+        width: 500px;
+        height: 300px;
         border-radius: 10px;
     }
 
     .right-arrow {
         position: absolute;
         top: 50%;
-        right: 32px;
+        right: -150px;
         font-size: 3rem;
         color: #000;
         z-index: 10;
@@ -37,7 +37,7 @@ export const CodeBlock = styled.div`
     .left-arrow {
         position: absolute;
         top: 50%;
-        left: 32px;
+        left: -150px;
         font-size: 3rem;
         color: #000;
         z-index: 10;
