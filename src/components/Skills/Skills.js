@@ -1,60 +1,68 @@
-import React from "react";
+import React, {useState} from "react";
 import Navbar from "../Navbar/Navbar";
 import { SkillsWrapper, 
-    Cicle,
+    Skillset,
     Panel,
     TextBackground } from './Skills.style';
 import { SkillsList } from './skillsList.js';
+import { certificatesList } from "./certificatesList";
+import certificateIcon from '../../image/certificate.png';
 
 function Skills() {
     const list = SkillsList;
-    console.log(list);
-
     const skills = list.map((item, i) => {
-                        // var x = Math.floor(Math.random() * (i+300));
-                        // var y = Math.floor(Math.random() * (i+250));
-                        // var translate = 'translate('+x+'px, '+y+'px)';
-                        // var css = {
-                        //     transform: translate 
-                        // }
+        return (
+            <div key={item.skill}>
+                {
+                    item.skillSet.map((val, index) => 
+                        <div key={index+"-"+item.skillSet} style={{
+                            transform: 'translate('+Math.floor(Math.random() * (index+370))+'px, '+Math.floor(Math.random() * (index+250))+'px)' 
+                        }} className='skill'>
+                            {val}
+                        </div>
+                )
+                }
+            </div>
+        );
+    });
+    
+    const certificates = certificatesList.map((item, i) => {
+        return (
+            <div className="certificate" key={i}>
+                <img src={certificateIcon} alt='' />
+                {
+                    <a href={item.file} download={item.fileName} target='_blank'>
+                        {item.description}
+                    </a>
+                }
+            </div>
+        )
+    });
 
-                        return (
-                            <div key={item.skill}>
-                                {
-                                    item.skillSet.map((val, index) => 
-                                        <div key={index+"-"+item.skillSet} style={{
-                                            transform: 'translate('+Math.floor(Math.random() * (index+300))+'px, '+Math.floor(Math.random() * (index+250))+'px)' 
-                                        }} className='skill'>
-                                            {val}
-                                        </div>
-                                )
-                                }
-                            </div>
-                        );
-                    });
+    const [run, setRun] = useState('active');
+
+    const runAnimation = () => {
+        setRun(run == 'active' ? 'paused' : 'active');
+    }
 
     return(
         <>
             <Navbar/>
             <SkillsWrapper>
-            
-                <Cicle>
-                    <div className="container">
-                        <h1>SkillsList</h1>
-                        <div className="skills">
-                        {
-                            skills.map((m, i) => {
-                                return <>{m}</>;
-                            })
-                        }
-                        </div>
-                    </div>
-                </Cicle>
-            
+                <Skillset onClick={runAnimation}>
+                    <h1>SkillsList</h1>
+                    <>
+                    {
+                        skills.map((m, i) => {
+                            return <div className={run} key={i}>{m}</div>;
+                        })
+                    }
+                    </>
+                </Skillset>
                 <Panel>
                     <h1>Certificates</h1>
                     <div className="container-certificates">
-                        
+                        {certificates}
                     </div>
                 </Panel>
             </SkillsWrapper>

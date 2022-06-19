@@ -5,6 +5,8 @@ export const ResumeWrapper = styled.div`
     justify-content: center;
     height: 100%;
     position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 
     /* The actual timeline (the vertical ruler) */
     .timeline {
@@ -164,15 +166,15 @@ export const Download = styled.a`
     box-shadow: 0px 0px 5px #ff7f00;
 `;
 
-export const ArrowContainer = styled.div`
+export const DownContainer = styled.div`
     margin-left: 23px;
-    animation-name: bounce;
+    animation-name: bounceDownload;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 `;
 
-export const Arrow = styled.div`
-    animation-name: opacity;
+export const Down = styled.div`
+    animation-name: download;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 
@@ -188,7 +190,7 @@ export const Arrow = styled.div`
         transform: rotate(45deg) translateZ(1px);
     }
 
-@keyframes opacity {
+@keyframes download {
 	0% {
 		opacity: 0;
 	}
@@ -234,7 +236,7 @@ export const Arrow = styled.div`
 	}
 }
 
-@keyframes bounce {
+@keyframes bounceDownload {
 	0% {
 		transform: translateY(0);
 	}

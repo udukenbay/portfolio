@@ -1,26 +1,17 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import { ResumeWrapper, 
-    Download, ArrowContainer, Arrow,
+    Download, DownContainer, Down,
     TextBackground } from './Resume.style';
 import { ResumeList } from "./cv.js";
 import downloadCV from '../../assets/files/cv/UrziyaDukenbay.CV.pdf';
 
 export default function Resume() {
     const list = ResumeList;
-    // console.log(list);
-
-    // const container = list.map((item) => (
-    //     // console.log(value.company + ' ' + index);
-    //     <div>
-    //        {item.time}
-    //     </div>
-    // ));
-
     const container = list.map((item, index) => 
         {
             if(index % 2 !== 0) {
-                return <div className="container left">
+                return <div className="container left" key={index}>
                             <div className="content">
                                 <p>{item.time}</p>
                                 <p>{item.company}</p>
@@ -31,7 +22,7 @@ export default function Resume() {
                             </div>
                     </div>
             } else {
-                return <div className="container right">
+                return <div className="container right" key={index}>
                             <div className="content">
                                 <p>{item.time}</p>
                                 <p>{item.company}</p>
@@ -56,10 +47,10 @@ export default function Resume() {
             <TextBackground>Resume</TextBackground>
 
             <Download href={downloadCV} download="download cv" target='_blank'>
-                <ArrowContainer>
-                    <Arrow><div></div></Arrow>
-                    <Arrow><div></div></Arrow>
-                </ArrowContainer>
+                <DownContainer>
+                    <Down><div></div></Down>
+                    <Down><div></div></Down>
+                </DownContainer>
             </Download>
         </>
     );

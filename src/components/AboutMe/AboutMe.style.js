@@ -28,10 +28,10 @@ export const Wrapper = styled.div`
 
     div {
         position: fixed;
-        width: 500px;
-        left: 500px;
-        top: 100px;
-        font-family: cursive;
+        width: 50%;
+        left: 25%;
+        top: 25%;
+        font-family: 'Montserrat', sans-serif;
         font-size: x-large;
     }
 `;
@@ -45,4 +45,5 @@ export const TextBackground = styled.div`
     font-weight: 400;
     font-size: 250px;
     color: rgba(0, 0, 0, 0.05);
+    z-index: -1000;
 `;
