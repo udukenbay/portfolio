@@ -1,11 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio-app/static/css/main.073c9b0a.css",
-    "main.js": "/portfolio-app/static/js/main.5c85f838.js",
+    "main.css": "/portfolio-app/static/css/main.d2731f49.css",
+    "main.js": "/portfolio-app/static/js/main.eb77bc94.js",
     "static/js/787.30237536.chunk.js": "/portfolio-app/static/js/787.30237536.chunk.js",
     "static/media/urziya.png": "/portfolio-app/static/media/urziya.e9c3ac956afbf6d9e9b9.png",
+    "static/media/udemyReactJS.pdf": "/portfolio-app/static/media/udemyReactJS.abab444d4aa216ade282.pdf",
     "static/media/computing.png": "/portfolio-app/static/media/computing.b516d52e1f5da839b6ad.png",
+    "static/media/slideshow.png": "/portfolio-app/static/media/slideshow.d099f9c1a79fc2d9f05f.png",
+    "static/media/DLD.pdf": "/portfolio-app/static/media/DLD.a87ea95e58a5b1f7ead3.pdf",
     "static/media/instagram.png": "/portfolio-app/static/media/instagram.8e408da00539cdef4629.png",
+    "static/media/c++SDU.pdf": "/portfolio-app/static/media/c++SDU.fdbff395f3fd1ee5c10a.pdf",
+    "static/media/UrziyaDukenbay.CV.pdf": "/portfolio-app/static/media/UrziyaDukenbay.CV.dae87c0bac0ff909ccc4.pdf",
+    "static/media/accordion.png": "/portfolio-app/static/media/accordion.bce11af2a03bfd4bc0e2.png",
+    "static/media/TurkishCulturePerform.pdf": "/portfolio-app/static/media/TurkishCulturePerform.4071af9e88b36ed19896.pdf",
+    "static/media/buttons.png": "/portfolio-app/static/media/buttons.362cae8b8a531e1c8057.png",
     "static/media/tekled_01.png": "/portfolio-app/static/media/tekled_01.4f710abf8c0637ce5d81.png",
     "static/media/gate_01.png": "/portfolio-app/static/media/gate_01.415a53b7a0e4586fe1c4.png",
     "static/media/sdu_01.png": "/portfolio-app/static/media/sdu_01.88b553e6c25622b615b1.png",
@@ -15,15 +23,17 @@
     "static/media/telegram.png": "/portfolio-app/static/media/telegram.e9722f26cc228e817986.png",
     "static/media/laptop.png": "/portfolio-app/static/media/laptop.2c9f18fbd55f20ba28b8.png",
     "static/media/logo_tag.png": "/portfolio-app/static/media/logo_tag.7b24e2796b3f0be66378.png",
+    "static/media/certificate.png": "/portfolio-app/static/media/certificate.6567da799c57647f551e.png",
+    "static/media/school.png": "/portfolio-app/static/media/school.f14fa3f2149a8cd10967.png",
     "static/media/twitter.png": "/portfolio-app/static/media/twitter.894988327f8d68209e91.png",
     "static/media/linkedin.png": "/portfolio-app/static/media/linkedin.f249b38224ca41a0b909.png",
     "index.html": "/portfolio-app/index.html",
-    "main.073c9b0a.css.map": "/portfolio-app/static/css/main.073c9b0a.css.map",
-    "main.5c85f838.js.map": "/portfolio-app/static/js/main.5c85f838.js.map",
+    "main.d2731f49.css.map": "/portfolio-app/static/css/main.d2731f49.css.map",
+    "main.eb77bc94.js.map": "/portfolio-app/static/js/main.eb77bc94.js.map",
     "787.30237536.chunk.js.map": "/portfolio-app/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5c85f838.js"
+    "static/css/main.d2731f49.css",
+    "static/js/main.eb77bc94.js"
   ]
 }
