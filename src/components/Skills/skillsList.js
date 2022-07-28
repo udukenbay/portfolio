@@ -1,43 +1,77 @@
 export const SkillsList = [
     {
-        "skill": "FrontEnd",
+        "skill": "FRONT-END",
         "skillSet": [
-            //Front-end
-            "Vue",
+            "HTML",
+            "HTML5",
+            "CSS",
+            "CSS3",
+            "Sass",
+            "Styled-components",
+            "Responsive design",
+            "Webpack",
+            "jQuery",
+            "Vuejs",
             "React",
-            "Javascript",
+            "Javascript(ES6)",
+            "Typescript",
+            "MVC",
+            "Unit Test(Unit Framework)"
         ],
     },
     {
-        "skill": "BackEnd",
+        "skill": "BACK-END",
         "skillSet": [
-            "Siebel CRM",
-            //Back-end
+            "Siebel(CRM, Oracle)",
             "Java",
-            "GO",
+            "GoLang (Go)",
             "Python",
+            "C#",
+            "next.js",
+            "Unit Test (IntelliJ)"
         ],
     },
     {
-        "skill": "Database",
+        "skill": "DATABASE",
         "skillSet": [
-            //database
-            "MS Sql",
+            "MS SQL Server",
             "MySQL",
-            "Pl Sql",
-            "Oracle",
+            "Pl SQL",
+            "PostgreSQL",
             "NoSQL",
         ],
     },
     {
+        "skill": "M I S C E L L A N E O U S",
+        "skillSet": [
+            "NPM | Yarn",
+            "Source control (Git, GitBucket, GitHub)",
+            "CI/CD Automation",
+            "Agile",
+            "JIRA, Trello",
+            "Figma",
+            "Unity, 3ds Max",
+            "Cisco, Packet Tracer"
+        ]
+    },
+    {
         "skill": "Soft Skills",
         "skillSet": [
-            //Soft-skills
             "Learnability",
             "Communication",
             "Critical Thinking",
             "Teamwork",
             "Writing Technical Documentation"
+        ]
+    },
+    {
+        "skill": "Language",
+        "skillSet": [
+            "Kazakh",
+            "Russian",
+            "English",
+            "Turkish",
+            "German"
         ]
     }
 ];
