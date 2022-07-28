@@ -4,7 +4,7 @@ import { ResumeWrapper,
     Download, DownContainer, Down,
     TextBackground } from './Resume.style';
 import { ResumeList } from "./cv.js";
-import downloadCV from '../../assets/files/cv/UrziyaDukenbay.CV.pdf';
+import downloadCV from '../../assets/files/cv/UD_CV_2022.pdf';
 
 export default function Resume() {
     const list = ResumeList;
