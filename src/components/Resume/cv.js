@@ -11,7 +11,7 @@ export const ResumeList = [
         "company": "Kaspi Bank",
         "position": "Software developer",
         "sector": "Finance",
-        "duties": "develop and lead algorithmic solutions to implement the task writing unit tests and debugging correct and improve the development of an already written process develop instructions, write technical documentation in the portal to be part of the development and implementation of new technologiess.",
+        "duties": "Develop and lead algorithmic solutions to implement the task; Building reusable components in Vuejs and implementing MVC by using jQuery and Javascript in the front-end part; Writing unit tests(IntelliJ), writing services and debugging in Siebel (back-end); Correct and improve the development of an already written process develop instructions, write technical documentation; Mentoring juniors, took a part in company culture by sharing knowledge.",
         "logo": kaspi
     },
     {
@@ -19,7 +19,7 @@ export const ResumeList = [
         "company": "GATE Insaat Taahhut Sanayi ve Ticaret",
         "position": "Lead Engineer",
         "sector": "Construction",
-        "duties": "Product code using .NET (C#), upgrade,  configure and debug the system, provide technical support. Designed and build architecture of the database in MS SQL Server, monitor documentation, and provide daily, weekly reports. Analyzing system and preparing monthly/weekly reports for management.",
+        "duties": "Product code using .NET languages (C#), upgrade, configure and debug the system, provide technical support; Designed and build architecture of the database in MS SQL Server, monitor documentation, and provide daily, weekly reports; Analyzing system and preparing monthly/weekly reports for management.",
         "logo": gate
     },
     {
@@ -27,7 +27,7 @@ export const ResumeList = [
         "company": "LLP Teksan",
         "position": "Database and BI Developer",
         "sector": "Industrial",
-        "duties": "Created and supported database in MS SQL Server. Maintained Tiger (SAP). Prepare KPI and BI reports (Datazen Dashboards). Analyzing sales and prioritizing sales according to sales reports at every city shop",
+        "duties": "Created and supported database in MS SQL Server; Maintained Tiger (SAP); Prepare KPI and BI reports (Datazen Dashboards). Analyzing sales and prioritizing sales according to sales reports at every city shop.",
         "logo": teksan
     },
     {
@@ -35,7 +35,7 @@ export const ResumeList = [
         "company": "Borlas Kazakhstan",
         "position": "Oracle Siebel CRM system developer",
         "sector": "IT Services",
-        "duties": "Supported and developed the system to customer requirements",
+        "duties": "Maintenance of Siebel CRM Application; Supported and developed the system to customer requirements.",
         "logo": borlas
     },
     {
